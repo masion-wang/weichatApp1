@@ -1,0 +1,43 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.flexInput {
+  display: flex;
+  align-items: center;
+  height: 70rpx;
+  border-bottom: 1px solid rgb(236, 233, 233);
+  padding: 10rpx;
+}
+
+.flexInput > view {
+  width: 40%;
+}
+
+.btn {
+  margin-top: 40rpx;
+  color: white;
+  font-size: 38rpx;
+  border-radius: 15px;
+  background: #58ca5c;
+}
+
+.marginTop {
+  margin-top: 20rpx;
+  padding-left: 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.marginTop > view {
+  width: 60%;
+}

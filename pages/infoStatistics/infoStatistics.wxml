@@ -1,0 +1,47 @@
+<!--信息统计-->
+<view class='main' style="font-weight:600;">
+  <view>信息统计</view>
+</view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <!--1.时间范围选择-->
+  <view class="section">
+    <picker mode="date" value="{{search.startTime}}" start="2020-03-05" end="" bindchange="startTime" name="startTime">
+      <view class="picker flexInput">
+        <view class="section__title">开始日期 : </view>{{search.startTime}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <picker mode="date" value="{{search.endTime}}" start="2020-03-05" end="" bindchange="endTime" name="endTime">
+      <view class="picker flexInput">
+        <view class="section__title">结束日期 : </view>{{search.endTime}}
+      </view>
+    </picker>
+  </view>
+  <!--身体状态-->
+  <view class="section section_gap flexInput">
+    <view class="section__title">身体状态</view>
+    <radio-group name="healthStatus">
+      <label wx:for="{{search.healthStatus}}" wx:key="key" style="margin-right:15rpx;">
+        <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.text}}</label>
+    </radio-group>
+  </view>
+  <!--是否本园区员工-->
+  <view class="section section_gap">
+    <view class="body-view  flexSwtich">
+      <view class="section__title">是否本园区员工</view>
+      <switch checked="{{search.isLocal}}" bindchange="switch1Change" name="isLocal" />
+    </view>
+  </view>
+  <view>
+    <button formType="submit" class="btn">查询</button>
+  </view>
+</form>
+<view class="middle">
+<view class='main'>
+  <view style="font-weight:600;font-size:35rpx;">查询结果</view>
+</view>
+<view class="marginTop" style="font-size:25rpx;font-weight:600;margin-top:90rpx;">在查询时间段内</view>
+<view class="marginTop" style="font-weight:600;font-size:40rpx;">进入园区总人数 : {{num_user}}</view>
+<view class="marginTop" style="font-weight:600;font-size:40rpx;">进入园区总次数 : {{num_in}}</view>
+</view>

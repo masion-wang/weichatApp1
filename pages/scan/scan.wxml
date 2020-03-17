@@ -1,0 +1,28 @@
+<view class='main'>
+  <view style="font-weight:600;">员工基本信息</view>
+</view>
+<view class="marginTop">姓名 : <view>{{name}}</view></view>
+<view class="marginTop">联系电话 : <view>{{phone}}</view></view>
+<view class="marginTop">身份证号 : <view>{{idcard}}</view></view>
+<view class="marginTop">是否园区企业 :
+  <view wx:if="{{isEnterprisesOfPark==true}}">是</view>
+  <view wx:else>否</view>
+</view>
+<view class="marginTop">公司名称 : <view>{{companyName}}</view></view>
+<view class="marginTop">健康状态 : <view>{{qrcode_txt}}</view></view>
+<view class="marginTop">上次测量体温 : <view>{{temperature}}</view></view>
+<view class="marginTop">上次进入园区时间 : {{test_time}}</view>
+<!--输入当日该员工的体温-->
+<view style="height:30rpx;"></view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section flexInput">
+    <view style="font-weight:600;">本次体温</view>
+    <input name="input" placeholder="请输入"/>
+  </view>
+  <view style="margin-top:200rpx;">
+    <button formType="submit" class="btn" style="width:75%;">提交体温数据</button>
+  </view>
+</form>
+
+<!--修改员工信息-->
+<button bindtap="changeInfo" class="btn" style="width:75%;">修改员工全部信息</button>

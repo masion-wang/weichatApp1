@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/adminOrUser/adminOrUser",
+    "pages/register/register",
+    "pages/mine/mine",
+    "pages/everyDay/everyDay",
+    "pages/infoStatistics/infoStatistics",
+    "pages/scan/scan",
+    "pages/userService/userService",
+    "pages/privacyPolicy/privacyPolicy",
+    "pages/manual/manual"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的健康码",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {}
+}

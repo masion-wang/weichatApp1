@@ -1,0 +1,19 @@
+.main {
+  font-size: 40rpx;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.title {
+  margin-top:20rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+}
+
+.content {
+  text-indent: 1em;
+  font-size: 30rpx;
+  line-height:47rpx;
+}

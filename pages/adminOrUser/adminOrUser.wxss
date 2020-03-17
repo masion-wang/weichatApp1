@@ -1,0 +1,95 @@
+.flex-item {
+  border: 1px solid #ccc;
+  border-radius: 30rpx;
+  width: 95%;
+  height: 20%;
+  margin: 50rpx 0;
+  padding: 7rpx;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0rpx 1rpx 2rpx 2rpx rgba(20, 20, 20, 0.1);
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  width: 11%;
+  height: 200rpx;
+}
+
+.info {
+  width: 80%;
+  color: white;
+}
+.big{
+  font-size:35rpx;
+}
+.small{
+  font-size:25rpx;
+  opacity:0.6
+}
+
+.demo-text-1 {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-left: 30rpx;
+  width: 70%;
+  background: #51c4ff;
+  box-shadow: 2px 5px 5px 0px #51c5ff2c;
+  height: 120rpx;
+}
+
+.demo-text-2 {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-left: 30rpx;
+  width: 70%;
+  background: #4ee1ab;
+  box-shadow: 2px 5px 5px 0px #4ee1ab32;
+  height: 120rpx;
+}
+
+.demo-text-3 {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-left: 30rpx;
+  width: 70%;
+  background: #9782f5;
+  box-shadow: 2px 5px 5px 0px #9782f542;
+  height: 120rpx;
+}
+
+.demo-text-4 {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-left: 30rpx;
+  width: 70%;
+  background: #fdad3b;
+  box-shadow: 2px 5px 5px 0px #fdac3b42;
+  height: 120rpx;
+}
+
+.demo-text-5 {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-left: 30rpx;
+  width: 70%;
+  background: #ff8f5e;
+  box-shadow: 2px 5px 5px 0px #ff8e5e3a;
+  height: 120rpx;
+}
+.demo-text-6{
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 30rpx;
+  width: 70%;
+  background: #ff8f5e;
+  box-shadow: 2px 5px 5px 0px #ff8e5e3a;
+  height: 120rpx;
+}

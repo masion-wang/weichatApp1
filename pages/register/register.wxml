@@ -1,0 +1,123 @@
+<!--登记信息-->
+<scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section flexInput">
+      <view class="section__title">姓名</view>
+      <input name="name" placeholder="请输入信息" value="{{form.name}}" bindinput="bindInput" id="name" />
+    </view>
+
+    <view class="section flexInput">
+      <view class="section__title">身份证号</view>
+      <input name="idcard" placeholder="请输入信息" value="{{form.idcard}}" bindinput="bindInput" id="idcard" />
+    </view>
+    <view class="section flexInput">
+      <view class="section__title">电话</view>
+      <input name="phone" placeholder="请输入信息" value="{{form.phone}}" id="phone" bindinput="bindInput" />
+    </view>
+    <view class="section">
+      <picker name="source" mode="region" value="{{form.source}}" bindchange="bindDateChange4">
+        <view class="picker flexInput">
+          <view> 来源地 : </view>
+          <text hidden="{{form.source.length>3}}">{{form.source[0]}} {{form.source[1]}} {{form.source[2]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class="section flexInput">
+      <view class="section__title">现居地址</view>
+      <input name="address" placeholder="请输入信息" value="{{form.address}}" id="address" bindinput="bindInput" />
+    </view>
+
+    <view class="section section_gap flexSwtich">
+      <view class="section__title">是否园区企业</view>
+      <switch name="isEnterprisesOfPark" checked='{{form.isEnterprisesOfPark}}' bindchange="switchChange1" />
+    </view>
+
+    <view class="section flexInput">
+      <view class="section__title">公司名字</view>
+      <input name="companyName" placeholder="请输入信息" value="{{form.companyName}}" id="companyName" bindinput="bindInput" />
+    </view>
+    <view hidden='{{!form.isEnterprisesOfPark}}' class="section flexInput">
+      <view class="section__title ">房间号</view>
+      <view>
+        <input name="roomNumber" placeholder="请输入信息" value="{{form.roomNumber}}" />
+      </view>
+    </view>
+
+    <view class="section section_gap flexSwtich">
+      <view class="section__title">14天是否接触过湖北或疫情严重地区人员</view>
+      <switch name="isTouchSickPeople" checked="{{form.isTouchSickPeople}}" />
+    </view>
+
+    <view class="section section_gap flexSwtich">
+      <view class="section__title">14天是否离开过石嘴山</view>
+      <switch name="isLeaveSHUIZUISHAN" checked="{{form.isLeaveSHUIZUISHAN}}" />
+    </view>
+
+    <view class="section section_gap flexSwtich">
+      <view class="section__title">亲属是否有确诊或疑似人员</view>
+      <switch name="isSickFamily" checked="{{form.isSickFamily}}" />
+    </view>
+
+    <view class="section section_gap flexSwtich">
+      <view class="section__title">近期是否有外出计划</view>
+      <switch name="isOutPlan" checked="{{form.isOutPlan}}" />
+    </view>
+
+    <view class="section section_gap flexSwtich">
+      <view class="section__title">是否外地返回人员</view>
+      <switch name="isOutsider" checked='{{form.isOutsider}}' bindchange="switchChange2" />
+    </view>
+
+    <view hidden='{{!form.isOutsider}}' class="section">
+      <picker name="backDate" mode="date" value="{{form.backDate}}" start="2020-03-01" end="2021-09-01" bindchange="bindDateChange3" style="width:100%;">
+        <view class="picker flexInput">
+          <view>返回日期 : </view>{{form.backDate}}
+        </view>
+      </picker>
+    </view>
+
+
+
+    <view hidden='{{!form.isOutsider}}' class="section flexInput">
+      <view class="section__title">交通工具</view>
+      <input name="vehicle" placeholder="请输入信息" value="{{form.vehicle}}" />
+    </view>
+
+    <view hidden='{{!form.isOutsider}}' class="section flexInput">
+      <view class="section__title">返回具体行程</view>
+      <input name="toDoWhat" placeholder="请输入信息" value="{{form.toDoWhat}}" />
+    </view>
+
+    <view class="section section_gap flexInput">
+      <view class="section__title ">身体状况</view>
+      <radio-group name="healthStatus">
+        <label wx:for="{{form.healthStatus}}" wx:key="key" style="margin-right:15rpx;">
+          <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.text}}</label>
+      </radio-group>
+    </view>
+
+    <view class="section flexInput">
+      <view class="section__title ">其它症状</view>
+      <input name="healthStatusTxt" placeholder="请输入信息" value="{{form.healthStatusTxt}}" />
+    </view>
+
+    <view class="section section_gap flexSwtich">
+      <view class="section__title">本人郑重承诺</view>
+      <switch name="promise" value="{{form.promise}}" />
+    </view>
+    <view style="font-size:24rpx;">上述信息是由我本人或代他人填写，本人对信息内容真实性和完整性负责，因信息填报不实导致相关后果的，本人愿承担相应责任。同时，本人保证遵守防疫管控的各项规定，配合并听从各项措施和要求。</view>
+    <view>
+      <view class="section section_gap flexSwtich">
+        <view class="section__title">已阅读</view>
+        <switch name="read" checked="{{read}}" bindchange="read"/>
+      </view>
+      <view style="font-size:24rpx;">请您阅读
+        <text style="color:blue;" bindtap="userService">《用户服务协议》</text>及
+        <text style="color:blue;" bindtap="privacyPolicy">《隐私政策》</text>
+      </view>
+    </view>
+    <view>
+      <button formType="submit" class="btn">提交</button>
+    </view>
+  </form>
+</scroll-view>

@@ -1,0 +1,33 @@
+.section {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+
+.flexInput {
+  display: flex;
+  height: 70rpx;
+  border-bottom: 1px solid rgb(236, 233, 233);
+  padding: 10rpx;
+}
+
+.flexInput view {
+  width: 40%;
+}
+
+.flexSwtich {
+  display: flex;
+  justify-content: space-between;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 10rpx;
+}
+
+.btn {
+  margin-top: 10rpx;
+  width: 70%;
+  color:white;
+  border-radius: 15px;
+  text-shadow: 0 -1px 1px #335166;
+  margin-bottom: 30rpx;
+  background: #58ca5c;
+}

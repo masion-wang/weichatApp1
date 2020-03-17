@@ -1,0 +1,10 @@
+.canvas-code {
+  background: white;
+  margin: 3rpx auto;
+}
+.marginTOP {
+  margin-top: 20rpx;
+}
+fontSize{
+  font-size:70rpx;
+}

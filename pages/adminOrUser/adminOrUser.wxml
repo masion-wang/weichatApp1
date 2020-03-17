@@ -1,0 +1,60 @@
+<!-- 用户或者管理员首页 -->
+<scroll-view>
+<image src='../../img/1.png' class="img" mode='widthFix'></image>
+<view class="page-body">
+  <!-- 用户页面 -->
+  <view class="user">
+    <view class="page-section-spacing">
+      <view class="flex-wrp" style="flex-direction:row;">
+        <view class="flex-item demo-text-1" bindtap="jumpToRegister" wx:if="{{isInit}}">
+          <image src="../../img/login.png" mode='widthFix' class="logo"></image>
+          <view class="info">
+            <view class="big">登录信息</view>
+            <view class="small">LOGIN INFORMATION</view>
+          </view>
+        </view>
+        <view class="flex-item demo-text-2" bindtap="jumpToeveryDay" wx:if="{{!isInit}}" style="display:{{isInit==false?'':'none'}}">
+          <image src="../../img/daka.png" mode='widthFix' class="logo"></image>
+          <view class="info">
+            <view class="big">每日健康打卡</view>
+            <view class="small">DAILY HEALTH CHECK-IN </view>
+          </view>
+        </view>
+        <view class="flex-item demo-text-5" bindtap="jumpToMine" wx:if="{{!isInit}}" style="display:{{isInit==false?'':'none'}}">
+          <image src="../../img/erweima.png" mode='widthFix' class="logo"></image>
+          <view class="info">
+            <view class="big">我的健康码</view>
+            <view class="small">MY HEALTH CODE</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 管理员页面 -->
+  <view wx:if="{{!isUser}}" class="admin">
+    <view class="flex-wrp" style="flex-direction:column;">
+      <view class="flex-item demo-text-4" bindtap="scan" wx:if="{{!isInit}}">
+        <image src="../../img/saoyisao.png" mode='widthFix' class="logo"></image>
+        <view class="info">
+          <view class="big">扫一扫</view>
+          <view class="small">SCAN IT</view>
+        </view>
+      </view>
+      <view class="flex-item demo-text-3" bindtap="jumpToInfoStatistics" wx:if="{{!isInit}}">
+        <image src="../../img/tongji.png" mode='widthFix' class="logo"></image>
+        <view class="info">
+          <view class="big">信息统计</view>
+          <view class="small">INFORMATION STATISTICH</view>
+        </view>
+      </view>
+      <view class="flex-item demo-text-6" bindtap="manual" wx:if="{{!isInit}}">
+        <image src="../../img/saoyisao.png" mode='widthFix' class="logo"></image>
+        <view class="info">
+          <view class="big">手动查询</view>
+          <view class="small">Manual query</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</scroll-view>

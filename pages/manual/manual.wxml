@@ -1,0 +1,10 @@
+<image src='../../img/1.png' class="img" mode='widthFix'></image>
+<form bindsubmit="formSubmit" bindreset="formReset" >
+  <view class="section flexInput" style="margin-top:50rpx;">
+    <view class="section__title">身份证号或手机号</view>
+    <input name="info" placeholder="请输入信息" value="{{form.info}}" bindinput="bindInput" id="info" />
+  </view>
+  <view>
+    <button formType="submit" class="btn"  style="margin-top:50rpx;">提交</button>
+  </view>
+</form>

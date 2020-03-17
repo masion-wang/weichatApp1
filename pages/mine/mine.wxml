@@ -1,0 +1,15 @@
+<!--我的健康码-->
+<view class="container">
+  <canvas class="canvas-code" canvas-id="myQrcode" style="width:200px;height:200px;" />
+  <view class="marginTOP" style="color:black;">
+    <text wx:if="{{qrcode_color=='green'}}" style="color:lightgreen;font-size:50rpx;"> 健康状态 : {{qrcode_txt}}</text>
+    <text wx:elif="{{qrcode_color=='yellow'}}" style="color:orange;font-size:50rpx;"> 健康状态 : {{qrcode_txt}}</text>
+    <text wx:elif="{{qrcode_color=='red'}}" style="color:red;font-size:50rpx;">健康状态 : {{qrcode_txt}}</text>
+  </view>
+  <view class="marginTOP " style="font-size:40rpx;">上次测量时间 : {{test_time}}</view>
+  <view class="marginTOP " style="font-size:40rpx;">上次测量体温 : {{temperature}}</view>
+  <view class="marginTOP" style="color:green;margin-top:59rpx;">启明星众创空间温馨提示</view>
+  <view class="marginTOP" style="color:green;font-size:32rpx;">疫情防控期间，请自觉佩戴口罩
+  </view>
+  <view class="marginTOP" style="color:green">出入园区请出示健康码并接受体温测量</view>
+</view>
